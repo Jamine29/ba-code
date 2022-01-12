@@ -1,0 +1,5 @@
+https://javascript.plainenglish.io/jwt-auth-with-node-and-passport-js-c41a91d333e0
+
+// return _id and birthName -> .find({}, {_id: 1, birthName: 1})
+
+// https://javascript.plainenglish.io/jwt-auth-with-node-and-passport-js-c41a91d333e0

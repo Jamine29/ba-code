@@ -1,0 +1,32 @@
+.dashbboard-button {
+    color: hsla(0, 0%, 0%, 1);
+    font-size: 16px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 1% 2% 1% 2%;
+    border: 1px solid;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.dashbboard-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashbboard-subtitle {
+    font-size: 20px;
+    text-align: center;
+}
+
+.dashbboard-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 20px;
+}

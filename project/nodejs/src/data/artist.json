@@ -1,0 +1,28 @@
+[
+    {
+        "birthName": "Kim Min Ji (김민지)",
+        "stageName": "JiU (지유)",
+        "birthday": "May 17, 1994",
+        "zodiacSign": "Taurus",
+        "nationality": "Japanese",
+        "height": "167 cm (5’6″)", 
+        "weight": "49 kg (108 lbs)",
+        "bloodType": "B",
+        "positions": "Leader, Lead Vocalist, Lead Dancer, Visual",
+        "facts": "<p>Ich bin JiU</p>",
+        "companies": "ABC Entertaiment"
+    },
+    {
+        "birthName": "Kim Bo Ra (김보라)",
+        "stageName": "SuA (수아)",
+        "birthday": "August 10, 1994",
+        "zodiacSign": "Leo",
+        "nationality": "-",
+        "height": "162 cm (5 ft 3¾ in)", 
+        "weight": "43 kg (94 lbs)",
+        "bloodType": "O",
+        "positions": "Main Dancer, Sub Vocalist, Lead Rapper",
+        "facts": "<p>Ich bin SuA</p>",
+        "companies": "ABC Entertaiment"
+    }
+]

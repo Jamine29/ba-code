@@ -1,0 +1,183 @@
+.form-group-search {
+    margin-bottom: 0px !important;
+}
+
+.form-width {
+    width: 50%;
+}
+
+.form-file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.form-container-input-file {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container-input-file label {
+    width: 140px;
+    background: hsla(0, 0%, 18.82%, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    padding: 0px 10px;
+    height: 50px;
+    font-size: 12px;
+}
+
+.form-img {
+    height: 300px;
+}
+
+.form-quill {
+    width: 100%;
+    height: 250px;
+    display: block;
+    padding-bottom: 40px;
+    background-color: hsla(0, 100%, 100%, 1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    transition: all .3s;
+}
+
+.form-group:focus-within {
+    transform: scale(1, 1)
+}
+
+.form-label {
+    font-size: 1em;
+    color: #aaa;
+    display: block;
+    opacity: 1;
+    transform: translate(.6em, -1.9em);
+    transform-origin: 0 0;
+    transition: all .3s;
+    height: 0;
+    cursor: auto;
+}
+
+.form-control {
+    box-shadow: none;
+    background-color: white;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: hsla(0, 16%, 82%, 1);
+    border-style: solid;
+    width: calc(100% - 22px);
+    transition: all .5s;
+    padding: 12px 10px 5px 10px;
+    height: 22px;
+}
+
+.form-control::placeholder {
+    color: transparent;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: hsla(0, 16%, 82%, 1);
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+    transform: translate(.6em, -2.4em) scale(.8);
+}
+
+.form-display-none {
+    display: none;
+}
+
+.form-error-message {
+    color: hsla(0, 100%, 45%, 1);
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.form-error-message-container {
+    border: hsla(0, 16%, 82%, 1) solid 1px;
+    border-radius: 4px;
+    background-color: hsla(0, 100%, 100%, 1);
+}
+
+.form-select {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.ql-toolbar.ql-snow {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.ql-container.ql-snow {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.form-button {
+    width: 220px;
+    background: hsla(0, 0%, 18.82%, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    padding: 0px 10px;
+    margin: 20px 0px;
+    height: 50px;
+}
+
+.form-button-icon {
+    width: 50px;
+    background: hsla(0, 0%, 18.82%, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    padding: 0px 10px;
+    height: 50px;
+}
+
+/* search*/
+
+.form-search-button {
+    border-width: 1px;
+    width: 40px;
+    height: 41px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left-width: 0px;
+    background-color: hsla(0, 0%, 18.82%, 1);
+    margin: 0px 0px 0px -2px;
+}
+
+.form-control-search {
+    border-right-width: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.form-input-container-search {
+    width: 36%;
+}

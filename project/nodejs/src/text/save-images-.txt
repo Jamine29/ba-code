@@ -1,0 +1,150 @@
+https://medium.com/swlh/uploading-images-to-mongodb-with-multer-ed345f2922ba
+
+https://stackoverflow.com/questions/57808987/cant-upload-file-to-mongodb
+
+https://code.tutsplus.com/tutorials/file-upload-with-multer-in-node--cms-32088
+
+https://www.freecodecamp.org/news/gridfs-making-file-uploading-to-mongodb/
+
+https://stackoverflow.com/questions/56818921/how-to-display-images-from-mongodb-gridfs
+
+https://picnature.de/how-to-upload-files-in-nodejs-using-multer-2-0/
+
+https://www.youtube.com/watch?v=KoWTJ5XiYm4
+
+https://blog.logrocket.com/uploading-files-using-multer-and-node-js/
+This means that the req.body object is empty. This is to be expected because, if you’ll recall, body-parser does not support multipart data. Instead, we’ll use Multer to parse the form.
+
+https://stackoverflow.com/questions/60286155/unable-to-export-a-variable-from-a-node-module-and-use-that-variable-across-my-n
+
+
+
+
+
+app.get('/images/:id', (req, res) => {
+    console.log('in image')
+    console.log(typeof req.params.id);
+    // mongoose.Types.ObjectId('60532c48faaa4a45bc2afe12')
+    gfs.files.findOne({_id : mongoose.Types.ObjectId(req.params.id)}, (err, file) => {
+        console.log(file)
+        const readstream = gridfsBucket.openDownloadStream(mongoose.Types.ObjectId(req.params.id));
+        readstream.pipe(res);
+    })
+
+/*
+    console.log('many')
+    gfs.files.find({}).toArray((err, file) => {
+        console.log(file)
+    })
+*/
+
+    //const readstream = gridfsBucket.openDownloadStream('60532d05d595fc11e097c67f');
+    //readstream.pipe(res);
+
+    /*
+    // {'_id': ObjectId('6052164f65581a360876241f')}
+    gfs.collection('image.files').findOne({'_id': ObjectId('605324ffc73d5308809125cd')}, (err, file) => {
+        //
+        for(let i = 0; i < file.length; i++) {
+            console.log(file[i]._id)
+            gridfsBucket.delete({_id: ObjectId(file[i]._id)}, function(error){
+                console.log('err')
+                console.log(error)
+          })
+        }
+        //
+
+        console.log(file)
+        if(file) {
+            //console.log(file[0].filename)
+            console.log('not null')
+            if(!file || file.length === 0){
+                console.log('in 404')
+                return res.status(404).json({err: 'No File Exists'});
+            } else {
+                console.log('type')
+                // Check if is image
+                if(file.contentType === "image/jpeg" || file.contentType === "image/png"){
+                    console.log('jo')
+                    // Read output to broswer
+                    //const readstream = gfs.createReadStream(file.filename);
+                    const readstream = gridfsBucket.openDownloadStream(ObjectID('605324ffc73d5308809125cd'));
+                    readstream.pipe(res);
+                } else {
+                    res.status(404).json({err: 'Not and image'});
+                }
+            }
+        }
+        if (file === null) res.status(404).json({err: 'Not and image'});
+    });
+    */
+
+https://stackoverflow.com/questions/60286155/unable-to-export-a-variable-from-a-node-module-and-use-that-variable-across-my-n
+Export an object and set a property on it. Objects are passed by reference.
+
+So:
+
+const gfs = {grid: undefined}
+
+dbInstance.once('open', () => {
+  gfs.grid = Grid(dbInstance.db, mongoose.mongo);
+  gfs.grid.collection('fileUploads');
+});
+
+...
+module.exports = {
+  dbInstance,
+  upload,
+  gfs,
+}; 
+
+
+app.post('/upload', store.upload.single('file'), async (req, res, next) => {
+    
+    console.log('in upload');
+    console.log(req.file);
+
+    const {
+        file, body
+    } = req;
+
+    //if(file.detectedFileExtension !== '.jpg') next(new Error('invalide file'))
+
+    //const fileName = 'img' + file.detectedFileExtension
+
+    //await pipelline(file.stream, fs.createWriteStream(`${__dirname}/../public/images/${fileName}`))
+
+    //console.log(req.body.file.length)
+    /*
+    for( let i = 0; i < req.body.file.length; i++ ){
+        console.log(typeof req.body.file)
+    }
+    console.log('jn')
+    */
+    //res.json({file: req.file})
+    //console.log(req.body)
+    // nconsole.log(req.file)
+
+    res.send('Hello')
+});
+
+
+/*
+connection.db.collection("media.files").find().toArray((err, files) => {
+      // Return the files that exist.
+      return res.json(files);
+})
+*/
+
+    /*
+    //console.log(...formData)
+    for(let i  of formData) {
+      console.log(i)
+    }
+    */
+
+
+https://dev.to/fakorededamilola/uploading-images-on-mongodb-via-nodejs-5h1l
+
+ 
+
